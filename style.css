@@ -6,6 +6,14 @@
     border: 0;
     outline: 0;
     box-sizing: border-box;
+    scrollbar-width: none;
+    
+}
+
+html{
+    scroll-behavior: smooth;
+    /* scroll-snap-type: mandatory; */
+
 }
 
 :root{
@@ -40,7 +48,11 @@ body{
     color:var(--color-gray-800);
     line-height:1.7; 
     font-weight: 300;
+    
+    
 }
+
+
 
 p, a, figcaption{
     font-size: 0.85rem;
@@ -52,7 +64,7 @@ p, a, figcaption{
 }
 
 img{
-    display:block; 
+    display:blo ck; 
     width: 100%;
     object-fit: cover;
 }
@@ -83,7 +95,7 @@ h2{
     transition: var(--transition);
 }
 
-.btn.sm{
+.btn .sm{
     padding: 0.4rem 1rem;
     font-weight: 400;
     border-radius: var(--radius-4);
@@ -99,6 +111,11 @@ h2{
 .btn:hover{
     background:var(--color-gray-900);
     color: var(--color-gray-100);
+    transform:translate(0, -0.2rem)
+}
+
+span{
+    color: var(--color-primary);
 }
 
 section{
@@ -136,7 +153,7 @@ nav{
     -moz-backdrop-filter: blur(15px);
     -o-backdrop-filter: blur(15px);
     -ms-backdrop-filter: blur(15px);
-
+    position: fixed;
     z-index: 100;
 }
 
@@ -177,13 +194,15 @@ nav{
 
 header{
     display:flex;
-    margin-top: 5rem;
+    margin: 7rem 0 7rem;
 }
 
 .header__container{
     display: flex;
     flex-direction: column;
     position:relative;
+    /* min-height: 91vh; */
+    /* margin-top: 2.5rem; */
 }
 
 .header__image {
@@ -225,7 +244,7 @@ h4 > span{
 .header__socials{
     position: absolute;
     right:0;
-    bottom: 0;
+    bottom: 0rem;
     display: flex;
     flex-direction: column;
     gap: 1.1rem;
@@ -234,7 +253,7 @@ h4 > span{
 .header__socials a{
     background-color: var(--color-gray-200);
     color: var(--color-gray-900);
-    padding: 1rem;
+    padding: 0.7rem;
     display: inline-block;
     border-radius: var(--radius-2);
     transition: var(--transition);
@@ -247,3 +266,87 @@ h4 > span{
 }
 
 /* =================ABOUT STYLING================= */
+
+.about__container{
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    gap: 7rem;
+
+}
+
+.about__image img{
+    border: 1rem solid var(--color-gray-500);
+    height: fit-content;
+    max-height: 35rem;
+    overflow: hidden;
+}
+
+.about__cards{
+    /* display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap:2rem;
+    margin: 3rem 0 1.5rem; */
+    display: flex;
+    flex-direction: row;
+    gap: 2.5rem;
+    margin: 3rem 0 1.5rem;
+
+}
+
+.about__card{
+    text-align: center;
+    background-color: var(--color-gray-100);
+    text-align: center;
+    padding: 1rem;
+    border-radius: var(--radius-2);
+    transition: var(--transition);
+    cursor: default;
+     
+}
+
+.about__card:hover{
+    background: var(--color-primary);
+    color: var(--color-gray-100)!important;
+    transform: translateY(-0.5rem);
+
+}
+
+.about__card i{
+    color: var(--color-primary);
+    font-size: 1.4rem;
+    display: inline-block;
+    padding: 0.5rem;
+    border-radius: var(--radius-4);
+}
+
+.about__card:hover i{
+    color: var(--color-primary);
+    background-color: var(--color-gray-100);
+}
+
+.about__card h4{
+    margin: 1rem 0 0.8rem;
+}
+
+.about__card small{
+    font-size: 0.7rem ;
+}  
+
+.about__details p{
+    margin-bottom: 0.8rem;
+}
+
+.about__details .btn{
+    margin-top: 2rem;
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.about__details .btn i{ 
+    font-size: 1.2rem;
+}
+
+
+
+/* =================SERVICES STYLING================= */
