@@ -282,16 +282,16 @@ h4 > span{
 }
 
 .about__cards{
-    /* display: grid;
+    display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap:2rem;
-    margin: 3rem 0 1.5rem; */
-    display: flex;
+    margin: 3rem 0 1.5rem;
+    /* display: flex;
     flex-direction: row;
     gap: 2.5rem;
-    margin: 3rem 0 1.5rem;
+    margin: 3rem 0 1.5rem;*/
 
-}
+} 
 
 .about__card{
     text-align: center;
@@ -324,11 +324,11 @@ h4 > span{
     background-color: var(--color-gray-100);
 }
 
-.about__card h4{
+.about__card h4 {
     margin: 1rem 0 0.8rem;
 }
 
-.about__card small{
+.about__card small {
     font-size: 0.7rem ;
 }  
 
