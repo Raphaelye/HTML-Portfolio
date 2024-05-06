@@ -405,4 +405,33 @@ h4 > span{
 
 .services__right p{
     margin-bottom: 0.8rem;
+    text-wrap: wrap;
+}
+
+
+/* =================STYLING================= */
+
+
+.projects__categories{
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    margin: 4rem 0 2.5rem;
+    flex-wrap: wrap;
+}
+
+.projects__categories li{
+    background: var(--color-gray-100);
+    padding: 0.6rem 1.5rem;
+    border-radius: var(--radius-4);
+    font-weight: 500;
+    font-size: 0.8rem;
+    cursor:pointer;
+    transition: var(--transition);
+}
+
+.projects__categories li:hover, .projects__categories .active {
+    background: var(--color-primary);
+    color: var(--color-gray-100);
 }
